@@ -1,0 +1,10 @@
+2) Copy one File another
+========================
+---
+- name: Copy one file to Another file.
+  hosts: ansibleclient01.local
+  tasks:
+	- name: copy src to dest
+	copy:
+		src: /root/test.txt
+		dest: /tmp/test.txt

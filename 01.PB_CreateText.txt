@@ -1,0 +1,19 @@
+1) Create Text File using Ansible:
+==================================
+---
+- name: Create text file for Ansible testing purpose
+  hosts: system.local
+  tasks:
+     - name: creating simple text for testing
+	   copy:
+	     content: Welcome to my Ansible playbook
+		 dest:  /tmp/test.txt
+
+
+---
+- hosts: webservers
+  tasks:
+  - name: Copy file to a remote server
+    copy:
+     src: /home/ansadmin/f1.txt
+     dest: /home/ansadmin/f1.txt
